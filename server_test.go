@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"testing"
+
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"github.com/wundergraph/graphql-go-tools/pkg/graphql"
@@ -19,6 +20,7 @@ var expectedTodos = `{"todos":[{"text":"todo","done":false,"user":{"name":"user 
 var URL = "localhost:" + defaultPort
 
 func TestMainFunc(t *testing.T) {
+	//test
 	router := NewRouter()
 	ts := httptest.NewUnstartedServer(router)
 	l, _ := net.Listen("tcp", URL)
