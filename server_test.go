@@ -25,7 +25,7 @@ func TestMainFunc(t *testing.T) {
 	ts := httptest.NewUnstartedServer(router)
 	l, _ := net.Listen("tcp", URL)
 	ts.Listener = l
-	ts.Start()
+
 	defer ts.Close()
 
 	t.Run("should create new todo", func(t *testing.T) {
